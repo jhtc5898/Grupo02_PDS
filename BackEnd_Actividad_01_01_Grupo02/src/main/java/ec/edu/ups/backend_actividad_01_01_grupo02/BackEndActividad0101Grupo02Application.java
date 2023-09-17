@@ -8,6 +8,7 @@ public class BackEndActividad0101Grupo02Application {
 
     public static void main(String[] args) {
         SpringApplication.run(BackEndActividad0101Grupo02Application.class, args);
+
     }
 
 }
