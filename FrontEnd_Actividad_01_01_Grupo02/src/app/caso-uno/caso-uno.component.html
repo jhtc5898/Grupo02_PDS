@@ -1,1 +1,36 @@
-<p>caso-uno works!</p>
+<div class="container">
+    <form (ngSubmit)="ok()">
+        <div class="form">
+            <input placeholder="Placa" [(ngModel)]="placa" name="placa">
+            <input placeholder="Color" [(ngModel)]="color" name="color">
+            <input placeholder="Año" [(ngModel)]="anio" name="anio">
+            <input placeholder="Marca" [(ngModel)]="marca" name="marca">
+            <input placeholder="Modelo" [(ngModel)]="modelo" name="modelo">
+            <button style="width: 100%;">Aceptar</button>
+        </div>
+    </form>
+    <hr>
+    <div>
+        <button (click)="recargar()">Recargar</button>
+        <hr>
+        <div *ngFor="let vehiculo of vehiculos">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Placa</th>
+                        <th>Color</th>
+                        <th>Año</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let vehiculo of vehiculos">
+                        <td>{{ vehiculo.placa }}</td>
+                        <td>{{ vehiculo.color }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
