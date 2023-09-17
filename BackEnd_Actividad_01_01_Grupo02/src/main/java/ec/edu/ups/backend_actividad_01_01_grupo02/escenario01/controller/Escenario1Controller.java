@@ -12,6 +12,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/escenario01")
+@CrossOrigin
 public class Escenario1Controller {
 
     @Autowired
