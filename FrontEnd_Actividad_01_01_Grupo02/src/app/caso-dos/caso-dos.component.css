@@ -1,7 +1,8 @@
 /* Estilos para la tabla */
 table {
-    border-collapse: collapse;
     width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Espacio adicional en la parte inferior de la tabla */
   }
   
   th, td {
@@ -17,11 +18,28 @@ table {
   /* Estilos para las imágenes */
   img {
     max-width: 100px;
-    max-height: 100px;
-    transition: transform 0.3s ease-in-out; /* Animación de transformación */
+    height: auto; /* Asegura que la altura se ajuste automáticamente */
   }
   
-  /* Animación al pasar el mouse sobre las imágenes */
-  img:hover {
-    transform: scale(1.1); /* Aumentar el tamaño al 110% al pasar el mouse */
+  /* Media query para hacer la tabla responsive en pantallas pequeñas */
+  @media screen and (max-width: 600px) {
+    table {
+      width: 100%;
+    }
+  
+    th, td {
+      display: block;
+      width: 100%;
+    }
+  
+    th, td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    td {
+      text-align: left;
+      margin-bottom: 10px;
+    }
   }
