@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CasoUnoComponent } from './caso-uno/caso-uno.component';
 import { CasoDosComponent } from './caso-dos/caso-dos.component';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
