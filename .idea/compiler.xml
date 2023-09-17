@@ -6,12 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="backend_actividad_01_01_grupo02" />
+        <module name="BackEnd_Actividad_01_01_Grupo02" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="backend_actividad_01_01_grupo02" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BackEnd_Actividad_01_01_Grupo02" options="-parameters" />
       <module name="backend_actividad_01_01_grupo02" options="-parameters" />
     </option>
   </component>

@@ -11,6 +11,7 @@ public class ActivoFijo {
     private Double peso;
     private String modelo;
     private LocalDate FechaCreacion;
+    private String URL;
 
     public String getCodigo() {
         return codigo;
@@ -76,6 +77,14 @@ public class ActivoFijo {
         FechaCreacion = fechaCreacion;
     }
 
+    public String getURL() {
+        return URL;
+    }
+
+    public void setURL(String URL) {
+        this.URL = URL;
+    }
+
     @Override
     public String toString() {
         return "ActivoFijo{" +
@@ -87,6 +96,7 @@ public class ActivoFijo {
                 ", peso=" + peso +
                 ", modelo='" + modelo + '\'' +
                 ", FechaCreacion=" + FechaCreacion +
+                ", URL='" + URL + '\'' +
                 '}';
     }
 }

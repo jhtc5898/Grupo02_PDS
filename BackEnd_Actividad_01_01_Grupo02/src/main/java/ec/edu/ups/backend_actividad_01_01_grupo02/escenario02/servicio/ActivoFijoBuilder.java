@@ -52,6 +52,11 @@ public class ActivoFijoBuilder {
         return this;
     }
 
+    public ActivoFijoBuilder conURL(String url){
+        this.activoFijo.setURL(url);
+        return this;
+    }
+
     public ActivoFijo build(){
         return this.activoFijo;
     }
