@@ -1,1 +1,26 @@
-<p>caso-dos works!</p>
+<table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Color</th>
+        <th>Dimensiones</th>
+        <th>Peso</th>
+        <th>Modelo</th>
+        <th>Fecha de Creación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of datos">
+        <td>{{ dato.codigo }}</td>
+        <td>{{ dato.nombre }}</td>
+        <td>{{ dato.precio }}</td>
+        <td>{{ dato.color }}</td>
+        <td>{{ dato.dimensiones }}</td>
+        <td>{{ dato.peso }}</td>
+        <td>{{ dato.modelo }}</td>
+        <td>{{ dato.FechaCreacion }}</td>
+      </tr>
+    </tbody>
+  </table>
