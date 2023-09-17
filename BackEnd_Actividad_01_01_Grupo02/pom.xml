@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ec.edu.ups</groupId>
-    <artifactId>backend_actividad_01_01_grupo02</artifactId>
+    <artifactId>BackEnd_Actividad_01_01_Grupo02</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>BackEnd_Actividad_01_01_Grupo02</name>
     <description>BackEnd_Actividad_01_01_Grupo02</description>
