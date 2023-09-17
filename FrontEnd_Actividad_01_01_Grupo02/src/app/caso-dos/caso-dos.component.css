@@ -1,0 +1,27 @@
+/* Estilos para la tabla */
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para las imágenes */
+  img {
+    max-width: 100px;
+    max-height: 100px;
+    transition: transform 0.3s ease-in-out; /* Animación de transformación */
+  }
+  
+  /* Animación al pasar el mouse sobre las imágenes */
+  img:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al 110% al pasar el mouse */
+  }
