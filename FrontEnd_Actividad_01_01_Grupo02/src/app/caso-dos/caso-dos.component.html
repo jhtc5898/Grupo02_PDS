@@ -1,0 +1,29 @@
+
+  <table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Color</th>
+        <th>Dimensiones</th>
+        <th>Peso</th>
+        <th>Modelo</th>
+        <th>Fecha de Creación</th>
+        <th>Imagen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let dato of datos">
+        <td>{{ dato.codigo }}</td>
+        <td>{{ dato.nombre }}</td>
+        <td>{{ dato.precio }}</td>
+        <td>{{ dato.color }}</td>
+        <td>{{ dato.dimensiones }}</td>
+        <td>{{ dato.peso }}</td>
+        <td>{{ dato.modelo }}</td>
+        <td>{{ dato.fechaCreacion }}</td>
+        <td><img [src]="dato.url" alt="{{ dato.nombre }}" width="100"></td>
+      </tr>
+    </tbody>
+  </table>
