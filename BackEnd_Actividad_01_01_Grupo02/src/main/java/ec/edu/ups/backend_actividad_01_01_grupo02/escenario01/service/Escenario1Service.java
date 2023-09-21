@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Slf4j
 @Component
 public class Escenario1Service {
 
@@ -22,8 +21,6 @@ public class Escenario1Service {
 
     public Vehiculo addVehiculo(VehiculoDTO vehiculoDTO) {
         var vehiculo = vehiculoFactory.crearVehiculoFactory(vehiculoDTO);
-        log.info("Vehiculo Recibido: {}", vehiculo);
-        log.info("Precio matricula del carro recibido: {}", vehiculo.calcularCostoMatricula());
         vehiculo.setPrecioMatricula(vehiculo.calcularCostoMatricula());
         escenario1Repository.addVehiculo(vehiculo);
         return vehiculo;

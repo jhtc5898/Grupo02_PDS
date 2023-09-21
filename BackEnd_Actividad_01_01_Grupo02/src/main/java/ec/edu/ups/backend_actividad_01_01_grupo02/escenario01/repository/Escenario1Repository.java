@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-@Slf4j
 @Component
 @Scope("singleton")
 public class Escenario1Repository {

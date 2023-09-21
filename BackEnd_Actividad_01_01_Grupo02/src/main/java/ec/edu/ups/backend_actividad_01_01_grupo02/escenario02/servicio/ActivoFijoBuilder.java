@@ -1,9 +1,11 @@
 package ec.edu.ups.backend_actividad_01_01_grupo02.escenario02.servicio;
 
 import ec.edu.ups.backend_actividad_01_01_grupo02.escenario02.model.ActivoFijo;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
+@Component
 public class ActivoFijoBuilder {
 
     private ActivoFijo activoFijo;
