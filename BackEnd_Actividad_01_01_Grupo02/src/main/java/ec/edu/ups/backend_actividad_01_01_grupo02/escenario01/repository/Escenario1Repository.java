@@ -1,12 +1,10 @@
 package ec.edu.ups.backend_actividad_01_01_grupo02.escenario01.repository;
 
-import ec.edu.ups.backend_actividad_01_01_grupo02.escenario01.model.Vehiculo;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
 import java.util.ArrayList;
 import java.util.List;
+import ec.edu.ups.backend_actividad_01_01_grupo02.escenario01.model.Vehiculo;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 @Component
 @Scope("singleton")
