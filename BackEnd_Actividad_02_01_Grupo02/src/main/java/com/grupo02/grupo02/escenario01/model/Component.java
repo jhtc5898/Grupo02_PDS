@@ -6,14 +6,14 @@ public abstract class Component {
 
     private String nombre;
     private BigDecimal tamanio;
-    private String ubicación;
+    private String ubicacion;
 
 
 
-    public Component(String nombre, BigDecimal tamanio, String ubicación) {
+    public Component(String nombre, BigDecimal tamanio, String ubicacion) {
         this.nombre = nombre;
         this.tamanio = tamanio;
-        this.ubicación = ubicación;
+        this.ubicacion = ubicacion;
     }
 
     public String getNombre() {
@@ -26,7 +26,7 @@ public abstract class Component {
 
     public abstract BigDecimal calcularTamanio();
 
-    public String getUbicación() {
-        return ubicación;
+    public String getUbicacion() {
+        return ubicacion;
     }
 }

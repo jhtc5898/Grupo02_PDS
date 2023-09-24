@@ -46,7 +46,7 @@ public class DTO {
         return "DTO{" +
                 "nombre='" + nombre + '\'' +
                 ", tamanio=" + tamanio +
-                ", ubicación='" + ubicacion + '\'' +
+                ", ubicacion='" + ubicacion + '\'' +
                 ", tipo='" + tipo + '\'' +
                 '}';
     }
