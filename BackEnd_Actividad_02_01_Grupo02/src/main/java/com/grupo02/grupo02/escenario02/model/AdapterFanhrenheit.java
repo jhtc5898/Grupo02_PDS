@@ -5,6 +5,6 @@ public class AdapterFanhrenheit implements ITemperatura {
 
     @Override
     public double temperatura(double temperatura) {
-        return 0;
+        return temperaturaFahrenheit.obtieneTemperatura(temperatura);
     }
 }
