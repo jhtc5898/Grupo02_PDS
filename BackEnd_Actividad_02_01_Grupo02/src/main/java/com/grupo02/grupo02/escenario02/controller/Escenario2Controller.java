@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/escenario02")
-//@CrossOrigin
+@CrossOrigin
 public class Escenario2Controller {
 
     @Autowired
