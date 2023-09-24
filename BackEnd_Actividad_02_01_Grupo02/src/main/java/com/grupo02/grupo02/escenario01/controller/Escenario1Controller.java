@@ -1,19 +1,15 @@
 package com.grupo02.grupo02.escenario01.controller;
 
 import com.grupo02.grupo02.escenario01.model.*;
-import com.grupo02.grupo02.escenario01.service.Escenario1Service;
-import org.apache.catalina.valves.rewrite.InternalRewriteMap;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 @RestController
 @RequestMapping("/escenario01")
 @CrossOrigin
 public class Escenario1Controller {
-    Carpeta carpeta = null;
+    Carpeta carpeta = new Carpeta("ROOT",new BigDecimal(0.0),"/");
     @GetMapping("/ListarArchivos")
     public Carpeta ListarArchivos() {
         return carpeta;
@@ -24,16 +20,16 @@ public class Escenario1Controller {
         System.out.println(dto.toString());
         switch (dto.getTipo().toUpperCase()){
             case "CARPETA":
-                carpeta = new Carpeta(dto.getNombre(),dto.getTamanio(),dto.getUbicación());
+                carpeta.add(new Carpeta(dto.getNombre(),dto.getTamanio(),dto.getUbicacion()));
                 break;
             case "DOCX":
-                carpeta.add(new Docx(dto.getNombre(),dto.getTamanio(),dto.getUbicación()));
+                carpeta.add(new Docx(dto.getNombre(),dto.getTamanio(),dto.getUbicacion()));
                 break;
             case "PDF":
-                carpeta.add(new Pdf(dto.getNombre(),dto.getTamanio(),dto.getUbicación()));
+                carpeta.add(new Pdf(dto.getNombre(),dto.getTamanio(),dto.getUbicacion()));
                 break;
             case "XLSX":
-                carpeta.add(new Xlsx(dto.getNombre(),dto.getTamanio(),dto.getUbicación()));
+                carpeta.add(new Xlsx(dto.getNombre(),dto.getTamanio(),dto.getUbicacion()));
                 break;
         }
     }

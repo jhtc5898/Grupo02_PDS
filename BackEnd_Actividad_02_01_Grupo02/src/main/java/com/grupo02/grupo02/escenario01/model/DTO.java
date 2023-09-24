@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class DTO {
     private String nombre;
     private BigDecimal tamanio;
-    private String ubicación;
+    private String ubicacion;
 
     private String tipo;
 
@@ -25,12 +25,12 @@ public class DTO {
         this.tamanio = tamanio;
     }
 
-    public String getUbicación() {
-        return ubicación;
+    public String getUbicacion() {
+        return ubicacion;
     }
 
-    public void setUbicación(String ubicación) {
-        this.ubicación = ubicación;
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
 
     public String getTipo() {
@@ -46,7 +46,7 @@ public class DTO {
         return "DTO{" +
                 "nombre='" + nombre + '\'' +
                 ", tamanio=" + tamanio +
-                ", ubicación='" + ubicación + '\'' +
+                ", ubicación='" + ubicacion + '\'' +
                 ", tipo='" + tipo + '\'' +
                 '}';
     }
