@@ -1,13 +1,11 @@
 <div class="container">
     <form (ngSubmit)="ok()">
         <div class="form">
-            <input placeholder="Placa" [(ngModel)]="placa" name="placa" required>
-            <input placeholder="Color" [(ngModel)]="color" name="color">
-            <input type="number" placeholder="Año" [(ngModel)]="anio" name="anio">
-            <input placeholder="Marca" [(ngModel)]="marca" name="marca">
-            <input placeholder="Modelo" [(ngModel)]="modelo" name="modelo">
+            <input placeholder="nombre" [(ngModel)]="nombre" name="nombre" required>
+            <input type="tamanio" placeholder="tamanio" [(ngModel)]="tamanio" name="anio">
+            <input placeholder="ubicacion" [(ngModel)]="ubicacion" name="ubicacion">
             <select [(ngModel)]="tipo" name="tipo">
-                <option [value]="tipo.value" *ngFor="let tipo of tiposVehiculo">{{tipo.viewValue}}</option>
+                <option [value]="tipo.value" *ngFor="let tipo of tiposDato">{{tipo.viewValue}}</option>
             </select>
             <button style="width: 100%;">Aceptar</button>
         </div>
@@ -20,24 +18,18 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Placa</th>
-                        <th>Color</th>
-                        <th>Año</th>
-                        <th>Marca</th>
-                        <th>Modelo</th>
-                        <th>Tipo</th>
-                        <th>Precio de Matrícula</th>
+                        <th>nombre</th>
+                        <th>tamanio</th>
+                        <th>ubicacion</th>
+                        <th>archivos</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let vehiculo of vehiculos">
-                        <td>{{ vehiculo.placa }}</td>
-                        <td>{{ vehiculo.color }}</td>
-                        <td>{{ vehiculo.anio }}</td>
-                        <td>{{ vehiculo.marca }}</td>
-                        <td>{{ vehiculo.modelo }}</td>
-                        <td>{{ vehiculo.tipo }}</td>
-                        <td>{{ vehiculo.precioMatricula }}</td>
+                    <tr *ngFor="let resp of arbol.archivos">
+                        <td>{{ resp.nombre }}</td>
+                        <td>{{ resp.tamanio }}</td>
+                        <td>{{ resp.ubicacion }}</td>
+                        <td>{{ resp.tipo }}</td>
                     </tr>
                 </tbody>
             </table>
