@@ -15,6 +15,8 @@
         <button (click)="recargar()">Recargar</button>
         <hr>
         <div>
+            <h1>Arbol</h1>
+            <h2>{{arbol.nombre}} - {{arbol.tamanio}} - {{arbol.ubicacion}} </h2>
             <table>
                 <thead>
                     <tr>
@@ -28,7 +30,7 @@
                     <tr *ngFor="let resp of arbol.archivos">
                         <td>{{ resp.nombre }}</td>
                         <td>{{ resp.tamanio }}</td>
-                        <td>{{ resp.ubicacion }}</td>
+                        <td>/ {{ resp.ubicacion }} . {{ resp.tipo }} </td>
                         <td>{{ resp.tipo }}</td>
                     </tr>
                 </tbody>
