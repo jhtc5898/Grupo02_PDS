@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 
 public class Pdf extends Component{
 
-    public Pdf(String nombre, BigDecimal tamanio, String ubicacion) {
-        super(nombre, tamanio, ubicacion);
+    public Pdf(String nombre, BigDecimal tamanio, String ubicacion, String tipo) {
+        super(nombre, tamanio, ubicacion, tipo);
     }
 
     @Override

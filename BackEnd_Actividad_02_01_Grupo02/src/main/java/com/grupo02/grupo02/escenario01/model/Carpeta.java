@@ -9,8 +9,8 @@ public class Carpeta extends Component {
 
     private List<Component> carpetaList = new ArrayList<>();
 
-    public Carpeta(String nombre, BigDecimal tamanio, String ubicacion) {
-        super(nombre, tamanio, ubicacion);
+    public Carpeta(String nombre, BigDecimal tamanio, String ubicacion, String tipo) {
+        super(nombre, tamanio, ubicacion, tipo);
     }
 
     @Override

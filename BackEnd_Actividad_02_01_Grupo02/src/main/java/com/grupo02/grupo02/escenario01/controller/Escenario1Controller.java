@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 @RequestMapping("/escenario01")
 @CrossOrigin
 public class Escenario1Controller {
-    Carpeta carpeta = new Carpeta("ROOT",new BigDecimal(0.0),"/");
+    Carpeta carpeta = new Carpeta("ROOT",new BigDecimal(0.0),"/","CARPETA");
     @GetMapping("/ListarArchivos")
     public Carpeta ListarArchivos() {
         return carpeta;
@@ -20,16 +20,16 @@ public class Escenario1Controller {
         System.out.println(dto.toString());
         switch (dto.getTipo().toUpperCase()){
             case "CARPETA":
-                carpeta.add(new Carpeta(dto.getNombre(),dto.getTamanio(),dto.getUbicacion()));
+                carpeta.add(new Carpeta(dto.getNombre(),dto.getTamanio(),dto.getUbicacion(), dto.getTipo()));
                 break;
             case "DOCX":
-                carpeta.add(new Docx(dto.getNombre(),dto.getTamanio(),dto.getUbicacion()));
+                carpeta.add(new Docx(dto.getNombre(),dto.getTamanio(),dto.getUbicacion(), dto.getTipo()));
                 break;
             case "PDF":
-                carpeta.add(new Pdf(dto.getNombre(),dto.getTamanio(),dto.getUbicacion()));
+                carpeta.add(new Pdf(dto.getNombre(),dto.getTamanio(),dto.getUbicacion(), dto.getTipo()));
                 break;
             case "XLSX":
-                carpeta.add(new Xlsx(dto.getNombre(),dto.getTamanio(),dto.getUbicacion()));
+                carpeta.add(new Xlsx(dto.getNombre(),dto.getTamanio(),dto.getUbicacion(), dto.getTipo()));
                 break;
         }
     }
