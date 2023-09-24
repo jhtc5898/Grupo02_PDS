@@ -52,18 +52,18 @@ export class CasoUnoComponent {
         modelo: this.modelo,
         tipo: this.tipo
       }
-      this.service.postVehiculo(data).subscribe(response => {
+      /* this.service.postVehiculo(data).subscribe(response => {
         this.recargar();
-      });
+      }); */
     } else {
       alert('Debe llenar todos los campos');
     }
 
   }
   recargar() {
-    this.service.getVehiculo().subscribe(response => {
+    /* this.service.getVehiculo().subscribe(response => {
       this.vehiculos = response;
-    });
+    }); */
   }
 
 }

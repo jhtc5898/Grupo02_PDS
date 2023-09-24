@@ -7,22 +7,17 @@ import { HttpClient } from '@angular/common/http'; // Importa HttpClient
 export class DataService {
 
   private apiUrl = 'http://localhost:8080/api/activofijo'; // Define la URL del servicio
-  private apiUrlCaso1 = 'http://localhost:8080/escenario01/addVehiculo'; // Define la URL del servicio
-  private apiUrlCaso1get = 'http://localhost:8080/escenario01/listVehiculos'; // Define la URL del servicio
+  private apiUrlCaso1 = 'http://localhost:8080/escenario02/temperatura'; // Define la URL del servicio
+  private apiUrlCaso1get = 'http://localhost:8080/escenario02/listar'; // Define la URL del servicio
 
 
   constructor(private http: HttpClient) { }
 
-  getactivofijo() {
+  postTemperatura(temperatura: any) {
     // Aquí puedes hacer una petición HTTP
-    return this.http.get(this.apiUrl + '/getactivofijo');
+    return this.http.post(this.apiUrlCaso1, temperatura);
   }
-
-  postVehiculo(vehiculo: any) {
-    // Aquí puedes hacer una petición HTTP
-    return this.http.post(this.apiUrlCaso1, vehiculo);
-  }
-  getVehiculo() {
+  getListarTemperatura(): any {
     // Aquí puedes hacer una petición HTTP
     return this.http.get(this.apiUrlCaso1get);
   }
