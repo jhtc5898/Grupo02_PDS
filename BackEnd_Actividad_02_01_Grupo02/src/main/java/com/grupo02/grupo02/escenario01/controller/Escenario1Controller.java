@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/escenario01")
 @CrossOrigin
 public class Escenario1Controller {
-   // @Autowired
-   // Escenario1Service escenario1Service;
+    // @Autowired
+    // Escenario1Service escenario1Service;
 
     @GetMapping("/prueba")
-    public String prueba(){
+    public String prueba() {
         return "ok";
     }
 }
