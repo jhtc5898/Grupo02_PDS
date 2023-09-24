@@ -1,0 +1,46 @@
+<div class="container">
+    <form (ngSubmit)="ok()">
+        <div class="form">
+            <input placeholder="Placa" [(ngModel)]="placa" name="placa" required>
+            <input placeholder="Color" [(ngModel)]="color" name="color">
+            <input type="number" placeholder="Año" [(ngModel)]="anio" name="anio">
+            <input placeholder="Marca" [(ngModel)]="marca" name="marca">
+            <input placeholder="Modelo" [(ngModel)]="modelo" name="modelo">
+            <select [(ngModel)]="tipo" name="tipo">
+                <option [value]="tipo.value" *ngFor="let tipo of tiposVehiculo">{{tipo.viewValue}}</option>
+            </select>
+            <button style="width: 100%;">Aceptar</button>
+        </div>
+    </form>
+    <hr>
+    <div>
+        <button (click)="recargar()">Recargar</button>
+        <hr>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Placa</th>
+                        <th>Color</th>
+                        <th>Año</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Tipo</th>
+                        <th>Precio de Matrícula</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let vehiculo of vehiculos">
+                        <td>{{ vehiculo.placa }}</td>
+                        <td>{{ vehiculo.color }}</td>
+                        <td>{{ vehiculo.anio }}</td>
+                        <td>{{ vehiculo.marca }}</td>
+                        <td>{{ vehiculo.modelo }}</td>
+                        <td>{{ vehiculo.tipo }}</td>
+                        <td>{{ vehiculo.precioMatricula }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
