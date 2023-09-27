@@ -15,21 +15,16 @@ public class Escenario2Service {
     @Autowired
     Escenario2Repository escenario2Repository;
     public double guardarTemperatura(TemperaturaDTO temperaturaDTO){
-        var registro = new TemperaturaDTO();
-        registro.setEdificio(temperaturaDTO.getEdificio());
-        registro.setTipo(temperaturaDTO.getTipo());
-        registro.setPiso(temperaturaDTO.getPiso());
-        double temp = 0;
+        double temperatura = 0;
         if(temperaturaDTO.getTipo().equalsIgnoreCase("F")){
-            temp = new AdapterFanhrenheit().temperatura(temperaturaDTO.getTemperatura());
-            registro.setTemperatura(temp);
+            temperatura = new AdapterFanhrenheit().temperatura(temperaturaDTO.getTemperatura());
         }
         if(temperaturaDTO.getTipo().equalsIgnoreCase("C")){
-            temp = new AdapterCelsius().temperatura(temperaturaDTO.getTemperatura());
-            registro.setTemperatura(temp);
+            temperatura = new AdapterCelsius().temperatura(temperaturaDTO.getTemperatura());
         }
-        escenario2Repository.add(registro);
-        return temp;
+        temperaturaDTO.setTemperatura(temperatura);
+        escenario2Repository.add(temperaturaDTO);
+        return temperatura;
     }
     public List<TemperaturaDTO> registroList(){
         return escenario2Repository.getAll();

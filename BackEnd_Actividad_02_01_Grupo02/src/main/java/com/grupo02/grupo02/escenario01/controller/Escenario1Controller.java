@@ -1,36 +1,29 @@
 package com.grupo02.grupo02.escenario01.controller;
 
-import com.grupo02.grupo02.escenario01.model.*;
+import com.grupo02.grupo02.escenario01.model.Carpeta;
+import com.grupo02.grupo02.escenario01.model.ComponenteDTO;
+import com.grupo02.grupo02.escenario01.service.Escenario1Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.math.BigDecimal;
 
 @RestController
 @RequestMapping("/escenario01")
 @CrossOrigin
 public class Escenario1Controller {
-    Carpeta carpeta = new Carpeta("ROOT",new BigDecimal(0.0),"/","CARPETA");
+
+    @Autowired
+    Escenario1Service escenario1Service;
+
     @GetMapping("/ListarArchivos")
-    public Carpeta ListarArchivos() {
-        return carpeta;
+    public Carpeta listarArchivos() {
+        return escenario1Service.getComponents();
     }
 
     @PostMapping("/AgregarComponente")
-    public void AgregarComponente(@RequestBody DTO dto) {
-        System.out.println(dto.toString());
-        switch (dto.getTipo().toUpperCase()){
-            case "CARPETA":
-                carpeta.add(new Carpeta(dto.getNombre(),dto.getTamanio(),dto.getUbicacion(), dto.getTipo()));
-                break;
-            case "DOCX":
-                carpeta.add(new Docx(dto.getNombre(),dto.getTamanio(),dto.getUbicacion(), dto.getTipo()));
-                break;
-            case "PDF":
-                carpeta.add(new Pdf(dto.getNombre(),dto.getTamanio(),dto.getUbicacion(), dto.getTipo()));
-                break;
-            case "XLSX":
-                carpeta.add(new Xlsx(dto.getNombre(),dto.getTamanio(),dto.getUbicacion(), dto.getTipo()));
-                break;
-        }
+    public ResponseEntity<String> agregarComponente(@RequestBody ComponenteDTO componenteDTO) {
+        escenario1Service.saveComponent(componenteDTO);
+        return ResponseEntity.ok("Componente Agregado Exitosamente");
     }
+
 }
