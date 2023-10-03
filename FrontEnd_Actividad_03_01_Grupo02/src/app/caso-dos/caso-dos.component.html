@@ -1,1 +1,30 @@
-<p>caso-dos works!</p>
+<form>
+    <div class="form-group text-center">
+      <img src="https://soy.ups.edu.ec/hs-fs/hubfs/Logo-ups-1.png?width=778&height=284&name=Logo-ups-1.png" alt="Logo UPS" class="img-fluid">
+    </div>
+    <div class="form-group">
+      <label for="romanNumber1">Transformar fechas romanas en decimales:</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="romanNumber1" [(ngModel)]="romanNumber1" name="romanNumber1" placeholder="Ejemplo: MCMXCIV/II/VV">
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-primary" (click)="fechaInterpreter()">Transformar</button>
+        </div>
+      </div>
+      <div class="mt-2">
+        <strong>Respuesta:</strong> {{respuesta1}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="romanNumber2">Transformar números romanos en decimales:</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="romanNumber2" [(ngModel)]="romanNumber2" name="romanNumber2" placeholder="Ejemplo: MCMXCIV">
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-primary" (click)="generalInterpreter()">Transformar</button>
+        </div>
+      </div>
+      <div class="mt-2">
+        <strong>Respuesta:</strong> {{respuesta2}}
+      </div>
+    </div>
+  </form>
+  
