@@ -12,8 +12,13 @@ public class InterpreterController {
     @Autowired
     InterpreterService interpreterService;
 
-    @GetMapping("/evaluar")
-    public String evaluarCadena(@RequestParam String expresionEvaluar){
-        return interpreterService.evaluar(expresionEvaluar);
+    @GetMapping("/evaluarFecha")
+    public String evaluarFecha(@RequestParam String expresionEvaluar) {
+        return "{\"data\":\"" +interpreterService.evaluar(expresionEvaluar)+ "\"}";
+    }
+
+    @GetMapping("/evaluarGeneral")
+    public Integer evaluarGeneral(@RequestParam String expresionEvaluar){
+        return interpreterService.interpreter(expresionEvaluar);
     }
 }
