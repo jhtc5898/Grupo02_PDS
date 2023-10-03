@@ -12,8 +12,8 @@ public class InterpreterController {
     @Autowired
     InterpreterService interpreterService;
 
-    @PostMapping("/evaluar")
-    public Integer evaluarCadena(@RequestBody String expresionEvaluar){
+    @GetMapping("/evaluar")
+    public String evaluarCadena(@RequestParam String expresionEvaluar){
         return interpreterService.evaluar(expresionEvaluar);
     }
 }

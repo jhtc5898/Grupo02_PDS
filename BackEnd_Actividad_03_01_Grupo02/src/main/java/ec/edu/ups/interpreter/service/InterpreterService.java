@@ -9,9 +9,25 @@ import java.util.List;
 @Component
 public class InterpreterService {
 
-    public Integer evaluar(String expresionEvaluar){
+    public String evaluar(String expresionEvaluar){
+
+        String[] fechaSeparada =  separarFecha(expresionEvaluar);
+
+        if (fechaSeparada != null && fechaSeparada.length == 3) {
+            String dia = String.valueOf(interpreter(fechaSeparada[0]));
+            String mes = String.valueOf(interpreter(fechaSeparada[1]));
+            String anio = String.valueOf(interpreter(fechaSeparada[2]));
+
+            return dia + "/" + mes + "/" + anio;
+        } else {
+            return "Formato de fecha incorrecto";
+        }
+    }
+
+    public Integer interpreter(String data) {
+
         //String expresionEvaluar = "MCMXCIV";
-        Contexto contexto = new Contexto(expresionEvaluar);
+        Contexto contexto = new Contexto(data);
 
         //Se construye el arbol de parse cada clase corresponde a una regla gramatical
         List<Expresion> arbol = new ArrayList<>();
@@ -25,7 +41,17 @@ public class InterpreterService {
         for (Expresion exp: arbol) {
             exp.Interpretar(contexto);
         }
-
         return contexto.getValor();
+
+    }
+
+    private static String[] separarFecha(String fecha) {
+        if (fecha != null && (fecha.contains("/") || fecha.contains("-"))) {
+            // Utilizamos una expresión regular para dividir la fecha por "/" o "-"
+            String[] partes = fecha.split("[/-]");
+            return partes;
+        } else {
+            return null;
+        }
     }
 }
