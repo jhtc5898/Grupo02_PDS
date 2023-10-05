@@ -1,0 +1,81 @@
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img {
+    background-image: url('https://soy.ups.edu.ec/hs-fs/hubfs/Logo-ups-1.png?width=778&height=284&name=Logo-ups-1.png');
+    background-size: cover;
+    width: 500px;
+    height: 150px;
+
+}
+
+.chat-container {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-messages {
+    padding: 10px;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.message {
+    margin: 5px;
+    padding: 5px;
+    padding-inline: 10px;
+    border-radius: 5px;
+}
+
+.incoming {
+    background-color: #f0f0f0;
+}
+
+.outgoing {
+    background-color: #007bff;
+    color: #fff;
+    text-align: right;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.chat-input input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.container-chat {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}

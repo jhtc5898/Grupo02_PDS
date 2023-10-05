@@ -1,46 +1,86 @@
+/*Contenedor general*/
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* Estilo para el formulario */
 form {
-    max-width: 400px; /* Ancho máximo del formulario */
-    margin: 0 auto; /* Centrar el formulario horizontalmente */
+    max-width: 400px;
+    /* Ancho máximo del formulario */
+    margin: 0 auto;
+    /* Centrar el formulario horizontalmente */
 }
 
 /* Estilo para el grupo de formulario */
 .form-group {
-    margin-bottom: 20px; /* Espacio entre grupos de formulario */
+    margin-bottom: 20px;
+    /* Espacio entre grupos de formulario */
 }
 
 /* Estilo para las etiquetas de los campos de entrada */
 label {
-    display: block; /* Colocar cada etiqueta en una línea nueva */
-    font-weight: bold; /* Hacer que las etiquetas sean negritas */
+    display: block;
+    /* Colocar cada etiqueta en una línea nueva */
+    font-weight: bold;
+    /* Hacer que las etiquetas sean negritas */
 }
 
 /* Estilo para los campos de entrada */
 .form-control {
-    width: 100%; /* Ancho completo del campo de entrada */
-    padding: 10px; /* Espacio de relleno interno */
-    border: 1px solid #ccc; /* Borde del campo de entrada */
-    border-radius: 4px; /* Bordes redondeados */
+    width: 100%;
+    /* Ancho completo del campo de entrada */
+    padding: 10px;
+    /* Espacio de relleno interno */
+    border: 1px solid #ccc;
+    /* Borde del campo de entrada */
+    border-radius: 4px;
+    /* Bordes redondeados */
 }
 
 /* Estilo para los botones */
 .btn {
-    background-color: #007bff; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espacio de relleno interno */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-    border-radius: 4px; /* Bordes redondeados */
+    background-color: #007bff;
+    /* Color de fondo del botón */
+    color: #fff;
+    /* Color del texto del botón */
+    border: none;
+    /* Sin borde */
+    padding: 10px 20px;
+    /* Espacio de relleno interno */
+    cursor: pointer;
+    /* Cambiar el cursor al pasar sobre el botón */
+    border-radius: 4px;
+    /* Bordes redondeados */
 }
 
 /* Estilo para la etiqueta de respuesta */
 label {
-    font-weight: bold; /* Hacer que la etiqueta de respuesta sea negrita */
-    margin-top: 10px; /* Espacio superior entre etiqueta de respuesta y el elemento anterior */
+    font-weight: bold;
+    /* Hacer que la etiqueta de respuesta sea negrita */
+    margin-top: 10px;
+    /* Espacio superior entre etiqueta de respuesta y el elemento anterior */
 }
 
 /* Estilo para la respuesta */
 label {
-    font-weight: normal; /* Cambiar el peso de la fuente de la respuesta */
-    color: #333; /* Cambiar el color del texto de la respuesta */
+    font-weight: normal;
+    /* Cambiar el peso de la fuente de la respuesta */
+    color: #333;
+    /* Cambiar el color del texto de la respuesta */
+}
+
+/*imagen */
+.img {
+    background-image: url('https://soy.ups.edu.ec/hs-fs/hubfs/Logo-ups-1.png?width=778&height=284&name=Logo-ups-1.png');
+    background-size: cover;
+    width: 500px;
+    height: 150px;
 }

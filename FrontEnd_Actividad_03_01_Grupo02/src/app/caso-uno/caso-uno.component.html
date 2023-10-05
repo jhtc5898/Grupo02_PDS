@@ -1,1 +1,35 @@
-<p>caso-uno works!</p>
+<div class="container">
+    <div class="img">
+    </div>
+    <div class="container-chat">
+        <div class="chat-container">
+            <p style="text-align: center;">Chat de Juan</p>
+            <div class="chat-messages">
+                <div *ngFor="let mensaje of msg" class="message"
+                    [ngClass]="{'incoming': mensaje.includes('Juan -> Pedro'), 'outgoing': mensaje.includes('Pedro -> Juan')}">
+                    {{ mensaje.split(':')[1] }}
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Escribe tu mensaje..." [(ngModel)]="chatjuan" name="chatjuan">
+                <button (click)="msgJuan()">Enviar</button>
+            </div>
+        </div>
+        <div style="padding-inline: 25px;">
+            <button (click)="verMsg()">Recargar</button>
+        </div>
+        <div class="chat-container">
+            <p style="text-align: center;">Chat de Pedro</p>
+            <div class="chat-messages">
+                <div *ngFor="let mensaje of msg" class="message"
+                    [ngClass]="{'outgoing': mensaje.includes('Juan -> Pedro'), 'incoming': mensaje.includes('Pedro -> Juan')}">
+                    {{ mensaje.split(':')[1] }}
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Escribe tu mensaje..." [(ngModel)]="chatpedro" name="chatpedro">
+                <button (click)="msgPedro()">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
